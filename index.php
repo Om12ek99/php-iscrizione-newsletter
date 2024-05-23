@@ -12,17 +12,14 @@
         <button type="submit">submit</button>
     </form>
     <?php 
+    //inclusion of function.php
+    include 'function.php';
 
     // first condition
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {         //=====> checks if request is made
         $email = $_POST['email'];                       //======> assigns variable email to the value received
         
-        //second condition
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {        //use of propriety filter_var where the first item is the one needed to be filtered, and the second one is the filter
-            echo "<p>Email valida: $email</p>";                 //adding of a HTML line
-        } else {
-            echo "<p>Email non valida.</p>";                    //adding of a HTML line
-        }   
+       
         
         // Debugging 
         var_dump($_POST);
