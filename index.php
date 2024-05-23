@@ -12,14 +12,18 @@
         <button type="submit">submit</button>
     </form>
     <?php 
-    //inclusion of function.php
-    include 'function.php';
+   
+    
 
     // first condition
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {         //=====> checks if request is made
         $email = $_POST['email'];                       //======> assigns variable email to the value received
-        
-       
+
+
+
+    //inclusion of function.php    
+    include 'function.php';     
+    validate_email($email);                             //call to function
         
         // Debugging 
         var_dump($_POST);
