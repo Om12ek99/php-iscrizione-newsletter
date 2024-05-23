@@ -11,8 +11,6 @@
         <input type="mail" name="email" id="email">
         <button type="submit">submit</button>
     </form>
-    <?php 
-    var_dump($_POST);
-    ?>
+
 </body>
 </html>
